@@ -13,7 +13,12 @@ int	main() {
 		std::cerr << e.what() << std::endl;
 	}
 
-	std::vector<int>	smallVec = {1 ,2, 3, 4, 5};
+	std::vector<int>	smallVec;
+	smallVec.push_back(1);
+	smallVec.push_back(2);
+	smallVec.push_back(3);
+	smallVec.push_back(4);
+	smallVec.push_back(5);
 
 	small.addRange(smallVec.begin(), smallVec.end());
 
