@@ -18,7 +18,8 @@ int main() {
 		std::cerr << e.what() << std::endl;
 	}
 
-	std::cout << *vecRes << std::endl;
+	if (vecRes != vec.end())
+		std::cout << *vecRes << std::endl;
 
 	try {
 		vecRes = easyfind(vec, 2);
@@ -26,5 +27,6 @@ int main() {
 		std::cerr << e.what() << std::endl;
 	}
 
-	std::cout << *vecRes << std::endl;
+	if (vecRes != vec.end())
+		std::cout << *vecRes << std::endl;
 }
