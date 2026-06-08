@@ -37,7 +37,7 @@ ${NAME}: ${OBJS} ${OBJ_DIR}/main.o
 
 ${OBJ_DIR}/%.o: ${SRC_DIR}/%.cpp | ${OBJ_DIRS}
 	mkdir -p obj
-	bear --append -- ${CXX} ${CXXFLAGS} ${INCLUDE} ${DEFS} -c $< -o $@
+	${CXX} ${CXXFLAGS} ${INCLUDE} ${DEFS} -c $< -o $@
 
 ${OBJ_DIRS}:
 	mkdir -p $@
