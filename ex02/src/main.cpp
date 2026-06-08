@@ -27,14 +27,25 @@ int main()
 	}
 	std::stack<int> s(mstack);
 
-	std::cout << "Reverse stack: " << std::endl;
-	MutantStack<int>::reverse_iterator rit = mstack.rbegin();
-	MutantStack<int>::reverse_iterator rite = mstack.rend();
-	while (rit != rite)
-	{
-		std::cout << *rit << std::endl;
-		++rit;
-	}
+	std::cout << "mstack using for:";
+	for (MutantStack<int>::iterator i = mstack.begin();
+		i != mstack.end();
+		i++)
+		std::cout << " " << *i;
+	std::cout << std::endl;
+
+	MutantStack<std::string> stringStack;
+	stringStack.push("Hello");
+	stringStack.push("there");
+	stringStack.push("general");
+	stringStack.push("Kenobi");
+
+	std::cout << "String stack:";
+	for (MutantStack<std::string>::iterator i = stringStack.begin();
+		i != stringStack.end();
+		i++)
+		std::cout << " " << *i;
+	std::cout << std::endl;
 
 	return 0;
 }
